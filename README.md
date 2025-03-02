@@ -43,6 +43,38 @@ We present KoWit-24, a dataset with fine-grained annotation of wordplay in 2,700
 
 ### Key features
 
+Unlike the majority of existing humor collections of canned jokes,KOWIT-24 provides wordplay contexts – each headline is accompanied by the news lead and summary. The most common type of wordplay in the dataset is the transformation of collocations, idioms, and named entities – the mechanism that has been underrepresented in previous humor datasets.
+
+Dataset entry example:
+```
+{
+ 'article_url': 'https://www.kommersant.ru/doc/5051268',
+ 'date': '2021-10-27',
+ 'headline': 'Диалектический пиломатериализм',
+ 'is_wordplay': True,
+ 'lead': 'Цены на фанеру и доски начали снижаться вслед за спросом',
+ 'summary': 'Пиломатериалы и лесопромышленная продукция начинают дешеветь по '
+            'мере завершения строительного сезона. По мнению аналитиков и '
+            'некоторых участников рынка, этому способствует сокращение спроса '
+            'на фоне летнего всплеска цен. И хотя на некоторые продукты, '
+            'например OSB, цена упала уже на треть, она все еще вдвое выше '
+            'уровня конца прошлого года. До конца года можно ожидать '
+            'стабилизации цен, полагают участники рынка, но едва ли '
+            'возвращения к средним многолетним значениям.'},
+'annotations': [{'end_index': 30,
+                  'headline_substring': 'Диалектический пиломатериализм',
+                  'reference_string': 'Диалектический материализм',
+                  'reference_url': 'https://ru.wikipedia.org/wiki/Диалектический_материализм',
+                  'start_index': 0,
+                  'wordplay_type': 'Reference'},
+                 {'end_index': 30,
+                  'headline_substring': 'пиломатериализм',
+                  'reference_string': ['материализм', 'пиломатериалы'],
+                  'reference_url': ['', ''],
+                  'start_index': 15,
+                  'wordplay_type': 'Nonce word'}]
+```
+
 ### How to load and use
 
 ```python
@@ -53,6 +85,8 @@ dataset = load_dataset("Humor-Research/KoWit-24", data_files=data_files)
 ```
 
 ## Repository structure
+
+TODO
 
 ## Experiments
 
@@ -121,3 +155,5 @@ for example in dataset["test"]:
 ```
 
 ## Citation
+
+TODO
