@@ -43,12 +43,11 @@ We present KoWit-24, a dataset with fine-grained annotation of wordplay in 2,700
 
 ### Key features
 
-Unlike the majority of existing humor collections of canned jokes,KOWIT-24 provides wordplay contexts – each headline is accompanied by the news lead and summary. The most common type of wordplay in the dataset is the transformation of collocations, idioms, and named entities – the mechanism that has been underrepresented in previous humor datasets.
+Unlike the majority of existing humor collections of canned jokes, KoWit-24 provides wordplay contexts – each headline is accompanied by the news lead and summary. The most common type of wordplay in the dataset is the transformation of collocations, idioms, and named entities – the mechanism that has been underrepresented in previous humor datasets. Moreover the dataset contains manually created annotations that provide information about what the wordplay refers to. Incorporating this annotation into the dataset enables automated evaluation of the large language model’s wordplay interpretations.
 
 Dataset entry example:
 ```
-{
- 'article_url': 'https://www.kommersant.ru/doc/5051268',
+{'article_url': 'https://www.kommersant.ru/doc/5051268',
  'date': '2021-10-27',
  'headline': 'Диалектический пиломатериализм',
  'is_wordplay': True,
