@@ -1,6 +1,6 @@
 # KoWit-24 
 
-[ Paper ](#)|[ Slides ](#)|[ Dataset ](https://huggingface.co/datasets/Humor-Research/KoWit-24)|[ Prompts ](https://smith.langchain.com/hub/humor-research)
+[ Paper ](https://arxiv.org/abs/2503.01510)|[ Slides ](#)|[ Dataset ](https://huggingface.co/datasets/Humor-Research/KoWit-24)|[ Prompts ](https://smith.langchain.com/hub/humor-research)
 
 ## Overview
 
@@ -28,6 +28,8 @@ We present KoWit-24, a dataset with fine-grained annotation of wordplay in 2,700
 
 ### Description
 
+Dataset contains manual annotated 2,700 headlines, of which 1,340 contained wordplay, so the dataset is almost perfectly balanced. For all headlines identified as containing wordplay, annotations were generated, including the original substring, a reference string, and a link to Wikipedia or Wiktionary. Distribution of headlines by wordplay type can be seen in Table 1. The most frequent wordplay mechanism in our dataset appeared to be the modification of existing well-known phrases – collocations, idiomatic expressions, or named entities.
+
 |                 | Wordplay type       | #   | AAL  | Links |
 |-----------------|---------------------|-----|------|-------|
 | Puns            | Polysemy            | 190 | 1.51 |       |
@@ -43,7 +45,7 @@ We present KoWit-24, a dataset with fine-grained annotation of wordplay in 2,700
 
 ### Key features
 
-Unlike the majority of existing humor collections of canned jokes, KoWit-24 provides wordplay contexts – each headline is accompanied by the news lead and summary. The most common type of wordplay in the dataset is the transformation of collocations, idioms, and named entities – the mechanism that has been underrepresented in previous humor datasets. Moreover the dataset contains manually created annotations that provide information about what the wordplay refers to. Incorporating this annotation into the dataset enables automated evaluation of the large language model’s wordplay interpretations.
+Unlike the majority of existing humor collections of canned jokes, KoWit-24 provides wordplay contexts – each headline is accompanied by the news lead and summary. The most common type of wordplay in the dataset is the transformation of collocations, idioms, and named entities – the mechanism that has been underrepresented in previous humor datasets. Moreover the dataset contains manually created annotations that provide information about what the wordplay refers to. Incorporating this annotation into the dataset **enables automated evaluation** of the large language model’s wordplay interpretations.
 
 Dataset entry example:
 ```
@@ -155,4 +157,15 @@ for example in dataset["test"]:
 
 ## Citation
 
-TODO
+```
+@misc{baranov2025kowit24richlyannotateddataset,
+      title={KoWit-24: A Richly Annotated Dataset of Wordplay in News Headlines}, 
+      author={Alexander Baranov and Anna Palatkina and Yulia Makovka and Pavel Braslavski},
+      year={2025},
+      eprint={2503.01510},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.01510}, 
+}
+
+```
