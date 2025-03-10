@@ -95,9 +95,45 @@ For the experiments, we allocated 200 records (100 from each class) for the deve
 
 ### Wordplay detection
 
+Wordplay detection was conducted across all models on the full dataset. The development set was utilized for providing examples in the prompt. Performance was evaluated based on the *is_wordplay* field. Examples of model predictions and parsing results are available [here](Notebooks/Experiments/wordplay_detection) and [here](Notebooks/Experiments/wordplay_detection_extended_prompt).
+
 ### Wordplay interpretation
 
+Word interpretation was performed on the entire dataset; however, the quality of the interpretations was assessed only for instances labeled as containing wordplay. Additionally, automatic interpretation was enabled when either *reference_string* or *reference_url* was present. The code can be found [here](Notebooks/Experiments/wordplay_interpretation) and [here](Notebooks/Experiments/wordplay_interpretation_extended_prompt).
+
+The aforementioned tasks were also performed on the RIA Novosti dataset. The corresponding code and results are available [here](Notebooks/Experiments/wordplay_detection_extended_prompt_ria) and [here](Notebooks/Experiments/wordplay_interpretation_extended_prompt_ria).
+
 #### Automatic interpretation evaluation
+
+To facilitate the evaluation of other large language models (LLMs) and to ensure the reproducibility of the current predictions and metrics, a function has been implemented, which can be configured using the following code:
+
+```
+pip install git+https://github.com/Humor-Research/kowit24_evaluation.git
+```
+
+An example of usage is available [here](Notebooks/Reports and tables/automatic_evaluation_interpretations/evaluation_extended_prompt_module.ipynb). Alternatively, refer to the example provided below.
+
+```python
+
+import numpy as np
+from datasets import load_dataset
+from kowit24_evaluation import check_interpretation
+
+data_files = {"test": "dataset.csv", "dev": "dev_dataset.csv"}
+dataset = load_dataset("Humor-Research/KoWit-24", data_files=data_files)
+
+llm_interpretations = LLM() # To perform the evaluation of the interpretations, consider that the texts of the interpretations have already been received
+
+results = list()
+for idx, example in enumerate(dataset["test"]):
+  results.append(
+    check_interpretation(example["annotations"], llm_interpretations[idx])
+  )
+
+print("Quality", np.mean(results))
+
+```
+
 
 ### Table of results
 
