@@ -1,6 +1,6 @@
 # KoWit-24 
 
-[ Paper ](https://arxiv.org/abs/2503.01510)|[ Slides ](#)|[ Dataset ](https://huggingface.co/datasets/Humor-Research/KoWit-24)|[ Prompts ](https://smith.langchain.com/hub/humor-research)
+[ Paper ](https://arxiv.org/abs/2503.01510)|[ Slides ](#)|[ 🤗 Dataset ](https://huggingface.co/datasets/Humor-Research/KoWit-24)|[ Prompts ](https://smith.langchain.com/hub/humor-research)
 
 ## Overview
 
