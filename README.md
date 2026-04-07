@@ -1,6 +1,10 @@
 # KoWit-24 
 
-[ Paper ](https://arxiv.org/abs/2503.01510)|[ Slides ](#)|[ 🤗 Dataset ](https://huggingface.co/datasets/Humor-Research/KoWit-24)|[ Prompts ](https://smith.langchain.com/hub/humor-research)
+ [![Dataset on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/dataset-on-hf-sm.svg)](https://huggingface.co/datasets/Humor-Research/KoWit-24) 
+ 
+ [![Read the Paper](https://img.shields.io/badge/Paper-arXiv%3A2503.01510-B31B1B.svg)](https://arxiv.org/abs/2503.01510)
+
+[ Slides ](#)|[ Prompts ](https://smith.langchain.com/hub/humor-research)
 
 ## Overview
 
@@ -86,8 +90,29 @@ dataset = load_dataset("Humor-Research/KoWit-24", data_files=data_files)
 ```
 
 ## Repository structure
+The repository is organized into two main parts: data artifacts and experiment notebooks.
 
-TODO
+```text
+KoWit-24/
+├── Data/
+│   ├── openai_batch_task/                 # JSON files for OpenAI batch inference runs
+│   ├── predictions/                       # Stored model outputs for detection and interpretation experiments
+│   └── processed_data/                    # Preprocessed inputs, prompts, and auxiliary annotation files
+├── Notebooks/
+│   ├── Experiments/                       # Notebooks for the main experiments
+│   │   ├── wordplay_detection/
+│   │   ├── wordplay_detection_extended_prompt/
+│   │   ├── wordplay_detection_extended_prompt_ria/
+│   │   ├── wordplay_detection_ria/
+│   │   ├── wordplay_interpretation/
+│   │   ├── wordplay_interpretation_extended_prompt/
+│   │   ├── wordplay_interpretation_extended_prompt_ria/
+│   │   └── wordplay_interpretation_ria/
+│   └── Reports and tables/                # Notebooks for evaluation, aggregation, and result tables
+│       ├── automatic_evaluation_interpretations/
+│       └── processing_classification_data/
+└── README.md                              # Project overview, dataset description, and usage instructions
+```
 
 ## Experiments
 
@@ -194,14 +219,23 @@ for example in dataset["test"]:
 ## Citation
 
 ```
-@misc{baranov2025kowit24richlyannotateddataset,
-      title={KoWit-24: A Richly Annotated Dataset of Wordplay in News Headlines}, 
-      author={Alexander Baranov and Anna Palatkina and Yulia Makovka and Pavel Braslavski},
-      year={2025},
-      eprint={2503.01510},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2503.01510}, 
+@inproceedings{baranov-etal-2025-kowit,
+    title = "{K}o{W}it-24: A Richly Annotated Dataset of Wordplay in News Headlines",
+    author = "Baranov, Alexander  and
+      Palatkina, Anna  and
+      Makovka, Yulia  and
+      Braslavski, Pavel",
+    editor = "Angelova, Galia  and
+      Kunilovskaya, Maria  and
+      Escribe, Marie  and
+      Mitkov, Ruslan",
+    booktitle = "Proceedings of the 15th International Conference on Recent Advances in Natural Language Processing - Natural Language Processing in the Generative AI Era",
+    month = sep,
+    year = "2025",
+    address = "Varna, Bulgaria",
+    publisher = "INCOMA Ltd., Shoumen, Bulgaria",
+    url = "https://aclanthology.org/2025.ranlp-1.15/",
+    pages = "125--132"
 }
 
 ```
