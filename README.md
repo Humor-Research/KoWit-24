@@ -103,6 +103,7 @@ The repository is organized into two main parts: data artifacts and experiment n
 KoWit-24/
 ├── Data/
 │   ├── openai_batch_task/                 # JSON files for OpenAI batch inference runs
+│   ├── dataset/                           # Dataset files
 │   ├── predictions/                       # Stored model outputs for detection and interpretation experiments
 │   └── processed_data/                    # Preprocessed inputs, prompts, and auxiliary annotation files
 ├── Notebooks/
