@@ -16,6 +16,7 @@ We present KoWit-24, a dataset with fine-grained annotation of wordplay in 2,700
 - [Content](#Content)
 - [Dataset](#Dataset)
   - [Description](#Description)
+  - [Download](#Download)
   - [Key features](#Key-features)
   - [How to load and use](#How-to-load-and-use)
 - [Repository structure](#Repository-structure)
@@ -46,6 +47,11 @@ Dataset contains manual annotated 2,700 headlines, of which 1,340 contained word
 |                 | Oxymoron            | 48  |      |       |
 
 *Table 1. Wordplay types, average anchor length in words (AAL), and wiki links in KOWIT-24*
+
+### Download
+
+The dataset can be downloaded [directly from this repository](Data/dataset).  
+For convenience, it is also available on [Hugging Face](https://huggingface.co/datasets/Humor-Research/KoWit-24).
 
 ### Key features
 
