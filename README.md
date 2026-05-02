@@ -144,7 +144,7 @@ To facilitate the evaluation of other large language models (LLMs) and to ensure
 pip install git+https://github.com/Humor-Research/kowit24_evaluation.git
 ```
 
-An example of usage is available [here](Notebooks/Reports and tables/automatic_evaluation_interpretations/evaluation_extended_prompt_module.ipynb). Alternatively, refer to the example provided below.
+An example of usage is available [here](Notebooks/Reports%20and%20tables/automatic_evaluation_interpretations/evaluation_extended_prompt_module.ipynb). Alternatively, refer to the example provided below.
 
 ```python
 
